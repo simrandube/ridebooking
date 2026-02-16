@@ -12,7 +12,7 @@ export default function UserLogin() {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
 
-  const handleLogin = (e: React.FormEvent) => {
+  const handleLogin = (e) => {
     e.preventDefault()
 
     console.log("User Login:", email, password)
@@ -28,7 +28,6 @@ export default function UserLogin() {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-zinc-100 px-6">
-
       <Card className="w-full max-w-md shadow-xl rounded-xl border border-zinc-100">
         <CardContent className="p-8 space-y-6">
 
@@ -65,7 +64,10 @@ export default function UserLogin() {
               />
             </div>
 
-            <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700">
+            <Button
+              type="submit"
+              className="w-full bg-blue-600 hover:bg-blue-700"
+            >
               Login
             </Button>
 
@@ -90,7 +92,6 @@ export default function UserLogin() {
 
         </CardContent>
       </Card>
-
     </div>
   )
 }
